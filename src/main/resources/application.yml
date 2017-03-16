@@ -1,0 +1,23 @@
+
+server:
+  port: 8083
+  
+spring:
+  application:
+    name: product-service
+  cloud:
+    config:
+      uri: http://${CONFIG_SERVICE_DOMAIN:localhost}:8888
+      name: product-service
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://${DISCOVERY_SERVICE_DOMAIN:localhost}:8666/eureka/
+
+management:
+  security:
+    enabled: false
