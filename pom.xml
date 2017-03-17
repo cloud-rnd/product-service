@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.chiwooplatform.cloud.sample</groupId>
-	<artifactId>poc-product-service</artifactId>
+	<artifactId>product-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>poc-product-service</name>
+	<name>product-service</name>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -69,5 +69,5 @@
 	</build>
 
 
-	<description>poc-product-service</description>
+	<description>product-service</description>
 </project>
