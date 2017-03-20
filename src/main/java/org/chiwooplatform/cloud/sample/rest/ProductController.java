@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RefreshScope
 @RestController
-public class ProductController {
+public class ProductController
+{
+    @Value("${poc.greeting:Hello~~~}")
+    private String greeting;
 
-	@Value("${poc.greeting:Hello~~~}")
-	private String greeting;
-
-	@RequestMapping(value = "/greeting", method = RequestMethod.GET)
-	public String greeting() {
-		return greeting;
-	}
+    @RequestMapping(value = "/greeting", method = RequestMethod.GET)
+    public String greeting()
+    {
+        return greeting;
+    }
 }
