@@ -3,6 +3,7 @@ server:
 
 eureka:
   instance:
+    hostname: ${PRODUCT_HOSTNAME:localhost}
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
   client:
