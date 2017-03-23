@@ -14,8 +14,14 @@ management:
   security:
     enabled: false
     
+      
 logging:
   level:
+    ROOT: INFO
     org.chiwooplatform.cloud.sample.rest: DEBUG 
     org.chiwooplatform.cloud.sample: DEBUG
-
+  file: logs/product-service-${port:8201}.log
+  path: ./logs/
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

@@ -7,3 +7,11 @@ spring:
       uri: http://cloud.configserver:8888/
       name: product-service
       enabled: true
+      
+endpoints:
+  shutdown:
+    #No auth  protected
+    sensitive: false
+    #Enable shutdown endpoint
+    enabled: true
+      
